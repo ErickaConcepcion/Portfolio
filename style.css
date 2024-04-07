@@ -1,0 +1,729 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 100%;
+
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+header .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  min-height: 12vh;
+  min-width: 100%;
+  z-index: 10;
+  background: white;
+  border-bottom: 1px solid #0c2d48;
+}
+
+header .navigation .logo {
+  margin-left: 20px;
+}
+
+header .navigation .logo h1 {
+  color: black;
+  font-size: 30px;
+  line-height: 38px;
+}
+
+header .navigation .menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  margin: auto 20px auto 0;
+}
+
+header .navigation .humbarger {
+  margin-right: 20px;
+  display: none;
+}
+
+header .navigation .humbarger .bar {
+  width: 30px;
+  height: 2px;
+  margin: 7px;
+  background: black;
+}
+
+header .navigation .menu-list li a {
+  color: black;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 1s ease, border 1s ease;
+  text-decoration: none;
+}
+
+/* ====================
+    Intro Section
+  =======================*/
+.intro-section {
+  height: 70vh;
+  position: relative;
+  background: white;
+}
+
+.intro-section .intro-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12vh;
+  padding-left: 2rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.intro-section .intro-content h1 {
+  color: black;
+  font-size: 4rem;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-top: 5%;
+}
+.description {
+  max-width: 80%;
+  text-align: justify;
+  text-justify: inter-word;
+  letter-spacing: 2px;
+}
+.intro-section .intro-content h6 {
+  margin-top: 5px;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.intro-section .intro-content p {
+  color: black;
+}
+
+.intro-section .intro-content .tagline .change-container {
+  position: relative;
+  display: inline-block;
+  width: 560px;
+
+  margin-top: 30px;
+}
+
+.intro-section .intro-content .changing {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  opacity: 0;
+  color: black;
+  text-transform: uppercase;
+  word-spacing: 5px;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.changing:nth-child(1) {
+  animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 1.5s infinite;
+}
+
+.changing:nth-child(2) {
+  animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 3s infinite;
+}
+
+.changing:nth-child(3) {
+  animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
+}
+
+@keyframes revealNextWord {
+  0% {
+    opacity: 0.3;
+    height: 0;
+  }
+  10% {
+    opacity: 1;
+    height: 1.2em;
+  }
+  20% {
+    opacity: 1;
+    height: 1.2em;
+  }
+  28% {
+    opacity: 0;
+    height: 2em;
+  }
+}
+
+.intro-section .intro-content .header-btn a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #3498db;
+  background-color: black;
+  padding: 15px;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.intro-section .intro-content .header-btn a:before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  height: 100%;
+  left: -25%;
+  width: 0%;
+  background-color: #3498db;
+  transform: skew(50deg);
+  transition-duration: 1s;
+  z-index: 1;
+}
+
+.intro-section .intro-content .header-btn a:hover {
+  color: black;
+}
+
+.intro-section .intro-content .header-btn a:hover:before {
+  width: 170%;
+}
+
+.intro-section .intro-content .header-btn a span {
+  position: relative;
+  z-index: 9;
+}
+
+/* ====================
+    Responsive Section
+  =======================*/
+
+/* Tablet desktop :768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  header .navigation .menu-list {
+    width: 100%;
+  }
+
+  header .navigation .menu-list li a {
+    font-size: 1rem;
+  }
+}
+
+.menu-list li:hover {
+  transform: scale(1.1); /* Scale the list item */
+  background-color: #ffbf1c; /* Change background color on hover */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Add smooth transition */
+}
+
+.second-section {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url(https://img.freepik.com/free-vector/abstract-horizontal-grid-lines-graph-style-graphic-design_1017-39918.jpg?w=1380&t=st=1710348909~exp=1710349509~hmac=bbda0a3…);
+}
+/* Large Mobile :480px. */
+
+@media only screen and (max-width: 767px) {
+  header .navigation .menu-list {
+    position: absolute;
+    top: 12vh;
+    color: white;
+    min-width: 100%;
+    background: #2c2c2c;
+    text-align: center;
+    display: none;
+  }
+
+  .intro-section .intro-content {
+    margin-top: 0;
+  }
+  header .navigation .menu-list li {
+    display: block;
+  }
+
+  header .navigation .menu-list li a {
+    display: block;
+    padding: 20px;
+    transition: color 1s ease, padding 1s ease, background-color 1s ease;
+    color: white;
+  }
+
+  header .navigation .menu-list li a:hover {
+    color: black;
+    padding-left: 30px;
+    background: rgba(177, 212, 224, 0.2);
+  }
+
+  header .navigation .humbarger {
+    display: block;
+  }
+
+  .intro-section .intro-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .intro-section .intro-content h6 {
+    font-size: 18px;
+    width: 400px;
+  }
+
+  .intro-section .intro-content .changing {
+    font-size: 1.5rem;
+  }
+
+  .intro-section .intro-content .header-btn a {
+    font-size: 1.25rem;
+  }
+}
+.firstSection {
+  overflow: hidden;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url(https://img.freepik.com/free-vector/abstract-horizontal-grid-lines-graph-style-graphic-design_1017-39918.jpg?w=1380&t=st=1710348909~exp=1710349509~hmac=bbda0a30da175a57eb4be6855ca8dc20eff00ab6c25bfcdee5b701b85a9e888c);
+}
+.secondSection {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url(https://img.freepik.com/free-vector/abstract-horizontal-grid-lines-graph-style-graphic-design_1017-39918.jpg?w=1380&t=st=1710348909~exp=1710349509~hmac=bbda0a3…);
+}
+
+.secondintro-content {
+  display: flex;
+
+  justify-content: center; /* horizontally centers items */
+  align-items: center; /* vertically centers items */
+}
+/* small mobile :320px. */
+
+@media only screen and (max-width: 479px) {
+  .intro-inner .intro-content h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .intro-inner .intro-content p {
+    margin-top: 10px;
+  }
+  .description {
+    max-width: 80%;
+    text-align: left;
+
+    letter-spacing: 2px;
+  }
+}
+/* CARDS */
+.card {
+  display: inline-block;
+  margin: 15px;
+  font-size: 14px;
+  padding: 3% 3%;
+  color: black;
+  line-height: 1.4;
+
+  position: relative;
+  overflow: hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  width: calc(33.3% - 10px);
+  min-height: 300px;
+  height: 400px;
+  background-color: white;
+}
+
+.card img.bg {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+.card h2 {
+  color: black;
+  font-weight: 800;
+  font-size: 30px;
+  margin: 10px 0px 8px -2px;
+  text-shadow: none;
+}
+.card h3 {
+  color: black;
+  font-weight: 800;
+  font-size: 15px;
+  margin: 10px 0px 8px -2px;
+  text-shadow: none;
+}
+.card h4 {
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+  margin: 10px 0px 8px -2px;
+  text-shadow: none;
+}
+.card .el {
+  vertical-align: -2px;
+  opacity: 0.3;
+  margin-left: -5px;
+}
+.introResume {
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 3px;
+
+  padding: 30px 30px;
+}
+@media only screen and (max-width: 1200px) {
+  .card {
+    width: calc(50% - 100px);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .intro-section .intro-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12vh;
+    padding-left: 2rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+  .card {
+    display: inline-block;
+    margin: 15px;
+    font-size: 14px;
+    padding: 5% 5%;
+    color: black;
+    line-height: 1.4;
+
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    width: calc(33.3% - 10px);
+    min-height: 300px;
+    height: 400px;
+    background-color: white;
+  }
+  .secondintro-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* horizontally centers items */
+    align-items: center; /* vertically centers items */
+  }
+  .card h2 {
+    color: black;
+    font-weight: 800;
+    font-size: 30px;
+    margin: 10px 0px 8px -2px;
+    text-shadow: none;
+  }
+  .card h3 {
+    color: black;
+    font-weight: 800;
+    font-size: 10px;
+    margin: 10px 0px 8px -2px;
+    text-shadow: none;
+  }
+  .card h4 {
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+    margin: 10px 0px 8px -2px;
+    text-shadow: none;
+  }
+  .card {
+    width: 300px;
+  }
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #123;
+  border-radius: 10px;
+}
+
+/* SKILL CONTAINER */
+
+.skillSection {
+  position: relative;
+  padding-top: 100px;
+
+  display: flex;
+  flex-direction: column;
+  background-color: #2c2c2c;
+}
+.skillHeader {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 3px;
+}
+
+.skillcontainer {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.column {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  margin: 10px;
+}
+.column h3 {
+  color: white;
+  font-size: 26px;
+  margin-top: 30px;
+  letter-spacing: 1px;
+}
+.column p {
+  color: white;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skillcontainer {
+    flex-direction: column;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* THIRD SECTION */
+
+/**
+ * Tabs
+ */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Horizontally centers flex items */
+  align-items: center;
+}
+.tabs label {
+  order: 1;
+  display: block;
+  padding: 1rem 2rem;
+  margin-right: 0.2rem;
+  cursor: pointer;
+  background-color: rgb(78, 78, 78);
+  color: #ffff;
+  /* background-color: rgb(78, 78, 78);
+  color: #ffbf1c; */
+  font-weight: bold;
+}
+.tabs .tab {
+  order: 99;
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  padding: 2rem;
+  background: #fff;
+}
+.tabs input[type="radio"] {
+  display: none;
+}
+.tabs input[type="radio"]:checked + label {
+  background: #ffbf1c;
+  color: black;
+}
+.tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
+
+/**
+ * Generic Styling
+*/
+.thirdSection {
+  background-color: #ffff;
+  height: 100vh;
+  box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 112%;
+}
+
+/* card */
+
+main {
+  background: #fafafa;
+  position: relative;
+  color: #263238;
+  display: flex;
+  width: 80%;
+  height: 17rem;
+  overflow: hidden;
+  box-shadow: 0 12px 24px -8px #777;
+  margin: auto;
+}
+
+main aside {
+  overflow: hidden;
+  flex: 0 0 42%;
+}
+
+main aside figure {
+  height: 100%;
+  margin: 0;
+}
+
+main aside figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main article {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  padding-top: 1rem;
+}
+
+main article header h2 {
+  font-size: 1.75rem;
+  margin: 0;
+  margin-bottom: 1.25rem;
+}
+
+main article p {
+  font-size: 1.5rem;
+  text-align: justify;
+  flex: 1;
+  margin: 0;
+}
+
+main article footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main article footer > span {
+  font-size: 1.15rem;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+main article footer > span i {
+  color: black;
+}
+
+main article footer figure {
+  margin: 0;
+}
+
+main article footer figure img {
+  height: 2.75rem;
+  width: 2.75rem;
+  border-radius: 50%;
+}
+
+main article footer a {
+  background-color: #3d5afe;
+  border-radius: 0.25rem;
+  padding: 0.6rem;
+  text-decoration: none;
+  color: white;
+}
+
+main article footer a:hover {
+  background-color: #304ffe;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    flex-direction: column;
+    height: 28rem;
+    width: 90%;
+  }
+
+  main aside {
+    width: 100%;
+  }
+
+  main aside figure {
+    width: 100%;
+    height: auto;
+  }
+
+  main aside figure img {
+    width: 100%;
+    height: auto;
+  }
+  main article p {
+    font-size: 1rem;
+  }
+}
+
+main {
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.buttonLink {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ffbf1c;
+  border: none;
+  color: black;
+  font-weight: 700;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
