@@ -24,10 +24,6 @@ header .navigation {
   border-bottom: 1px solid #0c2d48;
 }
 
-header .navigation .logo {
-  margin-left: 20px;
-}
-
 header .navigation .logo h1 {
   color: black;
   font-size: 30px;
@@ -39,7 +35,7 @@ header .navigation .menu-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 45%;
+  width: 60%;
   margin: auto 20px auto 0;
 }
 
@@ -78,6 +74,7 @@ header .navigation .menu-list li a {
   display: flex;
   flex-direction: column;
   margin-top: 12vh;
+
   padding-left: 2rem;
   position: absolute;
   width: 100%;
@@ -346,6 +343,7 @@ header .navigation .menu-list li a {
   min-height: 300px;
   height: 400px;
   background-color: white;
+  transition: transform 0.3s ease;
 }
 
 .card img.bg {
@@ -686,7 +684,7 @@ main article footer a:hover {
 @media only screen and (max-width: 600px) {
   main {
     flex-direction: column;
-    height: 28rem;
+    height: 32rem;
     width: 90%;
   }
 
@@ -729,4 +727,66 @@ main {
 }
 .buttonLink:hover {
   background-color: #ffa81b;
+}
+.card:hover {
+  transform: translateY(-10px);
+  border: 2px solid #ffa81b;
+}
+
+/* FLOATINGICONS */
+
+.sticky-icons {
+  background-color: wheat;
+  position: fixed;
+  left: 100%;
+  top: 80%;
+
+  transform: translateY(-50%);
+}
+
+.sticky-icons li {
+  display: block;
+  margin: 10px 0;
+}
+
+.sticky-icons a {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  text-decoration: none;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+  background-color: #1a1a1a;
+  color: rgb(255, 255, 255);
+  transition: left ease 300ms;
+  left: -50px;
+}
+
+.sticky-icons a:hover,
+.sticky-icons a:focus {
+  left: -100%;
+}
+
+.sticky-icons a .icon {
+  width: 50px;
+  min-height: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid #7f7f7f;
+  background-color: rgb(254, 254, 254);
+  color: rgb(255, 255, 255);
+  padding: 5px;
+}
+
+.sticky-icons a .text {
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: normal;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
 }
