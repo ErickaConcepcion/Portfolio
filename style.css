@@ -340,7 +340,8 @@ header .navigation .menu-list li a {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
   width: calc(33.3% - 10px);
-  min-height: 300px;
+  min-height: 500px;
+  min-width: 400px;
   height: 400px;
   background-color: white;
   transition: transform 0.3s ease;
@@ -358,7 +359,7 @@ header .navigation .menu-list li a {
 .card h2 {
   color: black;
   font-weight: 800;
-  font-size: 30px;
+  font-size: 32px;
   margin: 10px 0px 8px -2px;
   text-shadow: none;
 }
@@ -372,9 +373,10 @@ header .navigation .menu-list li a {
 .card h4 {
   color: black;
   font-weight: 500;
-  font-size: 15px;
-  margin: 10px 0px 8px -2px;
+  font-size: 20px;
+  margin: 40px 0px 8px -2px;
   text-shadow: none;
+  text-wrap: balance;
 }
 .card .el {
   vertical-align: -2px;
@@ -502,13 +504,13 @@ header .navigation .menu-list li a {
 }
 .column h3 {
   color: white;
-  font-size: 26px;
+  font-size: 32px;
   margin-top: 30px;
   letter-spacing: 1px;
 }
 .column p {
   color: white;
-  font-size: 18px;
+  font-size: 22px;
   margin-top: 10px;
 }
 
@@ -739,7 +741,7 @@ main {
   background-color: wheat;
   position: fixed;
   left: 100%;
-  top: 80%;
+  top: 40%;
 
   transform: translateY(-50%);
 }
@@ -759,7 +761,7 @@ main {
   background-color: #1a1a1a;
   color: rgb(255, 255, 255);
   transition: left ease 300ms;
-  left: -50px;
+  left: -90px;
 }
 
 .sticky-icons a:hover,
@@ -768,8 +770,8 @@ main {
 }
 
 .sticky-icons a .icon {
-  width: 50px;
-  min-height: 50px;
+  width: 80px;
+  min-height: 80px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -789,4 +791,20 @@ main {
   justify-content: flex-start;
   align-items: center;
   white-space: nowrap;
+}
+
+.skillDescription {
+  text-align: center;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.skill1 {
+  font-size: 40px;
+}
+
+h5 {
+  font-size: 20px;
+  color: white;
+  margin-top: 30px;
 }
