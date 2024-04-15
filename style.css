@@ -328,6 +328,7 @@ header .navigation .menu-list li a {
 }
 /* CARDS */
 .card {
+  font-family: "Montserrat", sans-serif;
   display: inline-block;
   margin: 15px;
   font-size: 14px;
