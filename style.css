@@ -454,7 +454,7 @@ header .navigation .menu-list li a {
   }
   .card h4 {
     color: black;
-    font-weight: 500;
+
     font-size: 15px;
     margin: 10px 0px 8px -2px;
     text-shadow: none;
@@ -504,7 +504,7 @@ header .navigation .menu-list li a {
   justify-content: center;
   align-items: center;
   padding: 20px;
-
+  text-align: center;
   margin: 10px;
 }
 .column h3 {
