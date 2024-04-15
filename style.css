@@ -274,7 +274,7 @@ header .navigation .menu-list li a {
   }
 
   .intro-section .intro-content h6 {
-    font-size: 18px;
+    font-size: 16px;
     width: 400px;
   }
 
@@ -410,6 +410,7 @@ header .navigation .menu-list li a {
     left: 0;
     top: 0;
   }
+
   .card {
     display: inline-block;
     margin: 15px;
@@ -426,6 +427,9 @@ header .navigation .menu-list li a {
     min-height: 300px;
     height: 400px;
     background-color: white;
+  }
+  .second-section {
+    height: 300vh;
   }
   .secondintro-content {
     display: flex;
@@ -567,6 +571,10 @@ header .navigation .menu-list li a {
 }
 
 @media (max-width: 45em) {
+  .sticky-icons a .icon {
+    width: 20px;
+    min-height: 20px;
+  }
   .tabs .tab,
   .tabs label {
     order: initial;
@@ -742,8 +750,6 @@ main {
   position: fixed;
   left: 100%;
   top: 40%;
-
-  transform: translateY(-50%);
 }
 
 .sticky-icons li {
@@ -760,13 +766,8 @@ main {
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
   background-color: #1a1a1a;
   color: rgb(255, 255, 255);
-  transition: left ease 300ms;
-  left: -90px;
-}
 
-.sticky-icons a:hover,
-.sticky-icons a:focus {
-  left: -100%;
+  left: -90px;
 }
 
 .sticky-icons a .icon {
