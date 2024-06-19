@@ -397,6 +397,9 @@ header .navigation .menu-list li a {
   .card {
     width: calc(50% - 100px);
   }
+  .second-section {
+    height: 300vh;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -809,4 +812,13 @@ h5 {
   font-size: 20px;
   color: white;
   margin-top: 30px;
+}
+
+.projectFont {
+  font-size: 18px;
+}
+@media only screen and (min-width: 1300px) {
+  .second-section {
+    height: 200vh;
+  }
 }
