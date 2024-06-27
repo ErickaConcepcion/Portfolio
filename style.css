@@ -770,8 +770,12 @@ main {
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
   background-color: #1a1a1a;
   color: rgb(255, 255, 255);
-
+  transition: left 0.3s ease; /* Smooth transition effect */
   left: -90px;
+}
+
+.sticky-icons a:hover {
+  left: -180px; /* Move to original position on hover */
 }
 
 .sticky-icons a .icon {
