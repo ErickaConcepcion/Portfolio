@@ -776,7 +776,7 @@ main {
 
 .sticky-icons a .icon {
   width: 80px;
-  min-height: 80px;
+  min-height: 40px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -784,7 +784,6 @@ main {
   border: 0.5px solid #7f7f7f;
   background-color: rgb(254, 254, 254);
   color: rgb(255, 255, 255);
-  padding: 5px;
 }
 
 .sticky-icons a .text {
@@ -814,11 +813,29 @@ h5 {
   margin-top: 30px;
 }
 
-.projectFont {
-  font-size: 18px;
-}
 @media only screen and (min-width: 1300px) {
   .second-section {
     height: 200vh;
+  }
+  .skillHeader {
+    font-size: 32px;
+  }
+  .projectFont {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .projectFont {
+    font-size: 14px;
+  }
+  .column p {
+    font-size: 16px;
+  }
+  .column h3 {
+    font-size: 32px;
+  }
+  .skillHeader {
+    font-size: 32px;
   }
 }
