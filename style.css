@@ -359,6 +359,7 @@ header .navigation .menu-list li a {
 
 .card h2 {
   color: black;
+  font-weight: 300px;
   font-size: 32px;
   margin: 10px 0px 8px -2px;
   text-shadow: none;
@@ -552,7 +553,6 @@ header .navigation .menu-list li a {
   color: #ffff;
   /* background-color: rgb(78, 78, 78);
   color: #ffbf1c; */
-  font-weight: bold;
 }
 .tabs .tab {
   order: 99;
