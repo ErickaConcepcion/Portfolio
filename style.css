@@ -139,7 +139,7 @@ header .navigation .menu-list li a {
 }
 
 .changing:nth-child(3) {
-  animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
+  animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4s infinite;
 }
 
 @keyframes revealNextWord {
